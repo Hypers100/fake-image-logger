@@ -1,2 +1,10 @@
 # fake-image-logger
-This is a fake image logger. Do not use this to scam, this is for educational purposes only.
+This is a fake image logger
+
+#Setup
+Download .zip and open index.html 
+
+
+#What It Does
+
+The website just sends to your discord server your image url. 
