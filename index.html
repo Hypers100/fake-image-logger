@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css"/>  
+  <link rel="icon" href="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/072016/untitled-1_16.png?itok=B4o_2UCy">
+	
+    <title>voids Image logger</title>
+</head>
+<body style="background-image: url('https://user-images.githubusercontent.com/274624/98246874-2e18a800-1f73-11eb-8583-f2c1f7d293f0.gif');"></body>
+<body>
+	<script>
+		function generate(){
+			console.log(Webhook.value)
+		}
+	</script>
+
+	<form>
+		<h1>Roblox Image logger (working as if feb 2022) </h1>
+		<input placeholder="Discord Image Url" type="text" required="" id="imgurl">
+		<input placeholder="Webhook Url" type="password" required="" id="Webhook">
+	  </form> 
+	  <button onclick="generate()" class="btn">Generate</button>
+
+	<script>
+		function generate(){
+			fetch(Webhook.value,
+  {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      // the username to be displayed
+      username: 'BOT - Image logger',
+      // the avatar to be displayed
+      avatar_url:
+        "https://static.wikia.nocookie.net/discord/images/e/ea/Nitro.png/revision/latest?cb=20210105222501",
+      // contents of the message to be sent
+      content:
+        '',
+      allowed_mentions: {
+        parse: ['users', 'roles'],
+      },
+      embeds: [
+        {
+          color: 243,
+          author: {
+            name: '',
+            url: '',
+            icon_url: '',
+          },
+          title: '',
+          url:
+            '',
+          thumbnail: {
+            url: 'https://user-images.githubusercontent.com/274624/98246874-2e18a800-1f73-11eb-8583-f2c1f7d293f0.gif'
+          },
+          description: "Your Image logger link: \n\n ``` " + `${imgurl.value}` + " ```" ,
+        },
+      ],
+    }),
+  } 
+).then(() => {
+      alert('Success!')
+  }) .catch((error) => alert("There wa/s an error." + error))
+
+
+}
+ 
+	</script>
+	  
+
+	  <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+</body>
+</html>
