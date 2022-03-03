@@ -6,5 +6,6 @@ Download .zip and open index.html
 
 
 # What It Does
-
-The website just sends to your discord server your image url. 
+It just sends the image url you put in the field to your discord server. 
+You could improve/modify the code without asking. I don't really care.
+I dont condon scamming or hacking. this is for educational purposes only.
